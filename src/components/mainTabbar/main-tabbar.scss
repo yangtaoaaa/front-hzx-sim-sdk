@@ -1,0 +1,80 @@
+.main-tabbar {
+    min-height: 100%;
+    background: rgba(10, 13, 23, 0.8);
+    display: flex;
+    flex-flow: column;
+    width: 1.36rem;
+    overflow: auto;
+    a{
+        min-height: 1.22rem;
+    }
+    p{
+        opacity: 0.4;
+        font-size: .22rem;
+        color: #FFFFFF;
+        letter-spacing: 0;
+        line-height: .22rem;
+        text-align: center;
+        margin-bottom: .2rem;
+    }
+    .tabbar-home{
+        height: 1.22rem;
+        padding-bottom: .16rem;
+        padding-top: .2rem;
+        img{
+            width: .9rem;
+            padding: .19rem .22rem;
+        }
+    }
+    .tabbar-nav{
+        img{
+            margin-top: .2rem;
+            margin-left: .38rem;
+            margin-bottom: .02rem;
+            // display: block;
+            width: .6rem;
+            filter: grayscale(0%);
+            display: inline-block;
+        }
+        // mt-badge{
+        //     width: .2rem;
+        //     height: .2rem;
+        //     margin: .2rem 0;
+        //     margin-bottom: .02rem;
+        //     display: inline-block;
+        //     background-color: green;
+        // }
+        .serviceRedPoint{
+            display: inline-block;
+            margin: .2rem 0 .42rem -0.1rem;
+            // margin-top: .2rem;
+            width: .15rem;
+            height: .15rem;
+            border-radius: 50%;
+            background-color: #F95960;
+        }
+    }
+    // .close {
+    //     p{
+    //         color: rgba(255, 255, 255, 0.4);
+    //         opacity: 1;
+    //     }
+    // }
+    // .open{
+    //     p{
+    //         color: #F67B29;
+    //         opacity: 1;
+    //     }
+    // }
+    .close {
+        color: rgba(255, 255, 255, 0.4);
+        opacity: 1;
+    }
+    .open{
+        color: #F67B29;
+        opacity: 1;
+    }
+}
+.main-tabbar::-webkit-scrollbar {
+    display: none;
+}

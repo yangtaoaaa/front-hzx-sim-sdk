@@ -1,0 +1,52 @@
+.sdk-form-item {
+    &+.sdk-form-item {
+        margin-top: .28rem; 
+    }
+    font-size: .28rem;
+    display: flex;
+    .item-start {
+        width: .3rem;
+        height: .3rem;
+        padding: .09rem .2rem;
+    }
+    .item-bd {
+        padding-left: .2rem; 
+        flex: 1;
+        display: flex;
+        align-items: center;
+        input {
+            border: none;
+            width: 100%;
+            font-size: .28rem;
+            line-height: 1.5em;
+            height: .28rem;
+            padding: .1rem 0;
+        }
+    }
+    .item-start+.item-bd {
+        padding-left: 0;
+    }
+    .item-clear {
+        display: block;
+        width: .26rem;
+        padding: 0 .2rem;
+        background: url(../../assets/icon_tabbar_cat.jpg) no-repeat center;
+        background-size: .26rem; 
+    }
+    .ic_edit {
+        background: url(../../assets/icon_tabbar_cat.jpg) no-repeat center;
+        background-size: .3rem;
+    }
+    .ic_mobile {
+        background: url(../../assets/icon_tabbar_cat.jpg) no-repeat center;
+        background-size: .3rem;
+    }
+    .ic_user {
+        background: url(../../assets/icon_tabbar_cat.jpg) no-repeat center;
+        background-size: .3rem;
+    }
+    .ic_card {
+        background: url(../../assets/icon_tabbar_cat.jpg) no-repeat center;
+        background-size: .3rem;
+    }
+}

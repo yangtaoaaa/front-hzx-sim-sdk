@@ -1,0 +1,46 @@
+.tool {
+    padding: 0.4rem 0.1rem;
+    li{
+        float: left;
+        width: 33.33%;
+        text-align: center;
+        margin-bottom: 0.31rem;
+        img{
+            width: 1.2rem;
+            height: 1.2rem;
+            display: inline-block;
+            border-radius: 100%;
+        }
+        p{
+            margin-top: 0.2rem;
+            font-size: 0.28rem;
+            color: #333333;
+            letter-spacing: 0;
+            line-height: 0.28rem;
+        }
+    }
+    .auth-img{
+        background: url('../../assets/icon_tabbar_cat.jpg') no-repeat 0;
+        background-size: 100%;
+        align-items: center;
+        width: 1.2rem;
+        height: 1.2rem;
+        display: inline-block;
+    }
+    .system-messages-img{
+        background: url('../../assets/icon_tabbar_cat.jpg') no-repeat 0;
+        background-size: 100%;
+        align-items: center;
+        width: 1.2rem;
+        height: 1.2rem;
+        display: inline-block;
+    }
+    .play-pay-img{
+        background: url('../../assets/icon_tabbar_cat.jpg') no-repeat 0;
+        background-size: 100%;
+        align-items: center;
+        width: 1.2rem;
+        height: 1.2rem;
+        display: inline-block;
+    }
+}

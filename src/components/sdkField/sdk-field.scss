@@ -1,0 +1,45 @@
+.sdk-field {
+
+    font-size: .28rem;
+    display: flex;
+    .item-label {
+        padding: .24rem .2rem;
+        width: 35%;
+    }
+    .item-bd {
+        padding-left: .2rem; 
+        flex: 1;
+        display: flex;
+        align-items: center;
+        input {
+            border: none;
+            width: 100%;
+            font-size: .28rem;
+            height: .28rem;
+            padding: .1rem 0;
+            text-align: right;
+            padding-right: .2rem;
+        }
+        textarea {
+            border: none;
+            width: 100%;
+            font-size: .28rem;
+            height: 1.18rem;
+            padding: .06rem 0;
+            outline: none;
+            resize: none;
+            padding-right: .2rem;
+            line-height: .28rem;
+        }
+    }
+    .item-start+.item-bd {
+        padding-left: 0;
+    }
+    .item-clear {
+        display: block;
+        width: .26rem;
+        padding: 0 .2rem;
+        background: url(../../assets/icon_tabbar_cat.jpg) no-repeat center;
+        background-size: .26rem; 
+    }
+}

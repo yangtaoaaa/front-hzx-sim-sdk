@@ -1,0 +1,48 @@
+.sdk-loading{
+    z-index: 100;
+    position: absolute;
+    top: .95rem;
+    // left: 1.36rem;
+    left: 0rem;
+    right: 0;
+    bottom: 0;
+    background: rgba(256, 256, 256, 0.58);
+    .loading-main{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        .loading-panel {
+            background: rgba(0, 0, 0, 0.6);
+            p {
+                font-size: .32rem;
+                padding-bottom: .2rem;
+                min-width: 3.2rem;
+                color: #fff;
+            }
+
+        }
+        .loading-img{
+            margin: auto;
+            width: 1.5rem;
+            height: 1.5rem;
+            background: url('../../assets/icon_tabbar_cat.jpg')center no-repeat;
+            background-size: .8rem;
+            animation: spin 800ms infinite linear;
+        }
+        @keyframes spin {
+            0%   { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        p{
+            font-size: .18rem;
+            text-align: center;
+        }
+    }
+}

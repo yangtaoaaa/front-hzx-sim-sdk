@@ -1,0 +1,68 @@
+body{
+    .mint-header{
+        border-bottom: 1px solid #E5E5E5; /*no*/
+        padding: 0 .2rem;
+        background: #FFFFFF;
+        font-size: 0.3rem;
+        color: #333333;
+        letter-spacing: 0;
+        line-height: 1.2;
+        .is-left, .is-right{
+            font-size: .28rem;
+            letter-spacing: 0;
+            line-height: .3rem;
+        }
+        .is-right{
+            color: #F67B29;
+        }
+        .mint-button-icon{
+            vertical-align: inherit;
+        }
+        .mintui-back:before {
+            font-size: .4rem
+        }
+    }
+    .mint-navbar {
+        padding: 0 .6rem;
+        height: .88rem;
+        border-bottom: 1px #E5E5E5 solid;
+        .mint-tab-item-label{
+            font-size: .28rem;
+            color: #333333;
+            letter-spacing: 0;
+            line-height: .28rem;
+        }
+        .mint-tab-item{
+            padding: .3rem 0;
+            margin: 0 .33rem;
+        }
+        .mint-tab-item.is-selected {
+            border-bottom: .04rem solid #F67B29;
+            color: #F67B29;
+            margin-bottom: -1px;
+            .mint-tab-item-label{
+                color: #F67B29;
+            }
+        }
+    }
+    // .v-modal{
+    //     left: 1.36rem;
+    // }
+    // .mint-datetime, .mint-popup-bottom, .mint-actionsheet{
+    //     transform: none;
+    //     left: 1.36rem;
+    //     right: 0;
+    //     width: auto;
+    // }
+    .mint-actionsheet-listitem:active, .mint-actionsheet-button:active{
+        background-color: #F67B29;
+    }
+    .mint-loadmore {
+        font-size: .28rem;
+    }
+    .mint-actionsheet-listitem, .mint-actionsheet-button{
+        height: 1rem;
+        line-height: 1rem;
+        font-size: .32rem;
+    }
+}

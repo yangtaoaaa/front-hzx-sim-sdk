@@ -1,0 +1,11 @@
+.sdk-tab-item {
+    flex: 1;
+    width: 0;
+    display: flex;
+    height: .88rem;
+    align-items: center;
+    justify-content: center;
+    &.active {
+        color: #F67B29;
+    }
+}

@@ -1,0 +1,149 @@
+.service{
+    .search-header{
+        padding: 0.32rem 0.2rem 0.2rem 0.2rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    .search-input{
+        background: #F5F5F5;
+        border: 1px solid #EEEEEE;
+        border-radius: 0.06rem;
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        width: 4.4rem;
+        height: 0.54rem;
+        line-height: 1.2;
+        padding: 0 0 0 .2rem;
+        font-size: 0.28rem;
+        outline: none;
+    }
+    .search-btn{
+        background: #FF9148;
+        border-radius: 0.06rem;
+        width: 0.98rem;
+        height: 0.56rem;
+        font-size: 0.28rem;
+        display: inline-block;
+        margin-left: 0.12rem;
+        padding: 0;
+        line-height: inherit;
+        color: #FFFFFF;
+        display: inline-block;
+    }
+    .question-category{
+        border-top: .2rem #F5F5F5 solid;
+        padding: .2rem;
+        h4{
+            font-size: .3rem;
+            color: #333333;
+            letter-spacing: 0;
+            line-height: .3rem;
+            margin: .1rem 0;
+            font-weight: normal;
+        }
+        .category-item{
+            width: 33%;
+            display: inline-block;
+            padding-bottom: .3rem;
+            text-align: center;
+            font-size: .24rem;
+            img{
+                height:.58rem;
+                width:.58rem;
+                display: block;
+                margin: .2rem auto;
+            }
+            p{
+                font-size: .24rem;
+                color: #666666;
+                letter-spacing: 0;
+                line-height: .24rem;
+            }
+        }
+    }
+    .hot-question{
+        border-top: 0.02rem #F5F5F5 solid;
+        padding: .3rem .2rem;
+        .hot-question-title{
+            position: relative;
+            label{
+                font-size: .3rem;
+                color: #333333;
+                line-height: .3rem;
+                font-weight: .8rem;
+                display: inline-block;
+            }
+            .hot-question-more-link2{
+                display: block;
+                float: right;
+                width: .85rem;
+                font-size: .28rem;
+                background: url('../../assets/icon_tabbar_cat.jpg') right no-repeat;
+                background-size: contain;
+            }
+            .hot-question-more-link{
+                display: inline-block;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                font-size: .3rem;
+                span{
+                    font-size: .3rem;
+                    color: #333333;
+                }
+                img{
+                    height: .3rem;
+                    width: .14rem;
+                    vertical-align: bottom;
+                }
+            }
+        }
+        .hotQuestion-item{
+            a{
+                display: block;
+                padding: .28rem .1rem 0rem .1rem;
+                font-size: .28rem;
+                color: #5E97F6;
+            }
+        }
+    }
+    .wechat{
+        border-top: .2rem #F5F5F5 solid;
+        padding: .2rem;
+        h4{
+            font-size: .3rem;
+            color: #333333;
+            letter-spacing: 0;
+            line-height: .3rem;
+            margin: .1rem 0;
+            font-weight: normal;
+        }
+        img{
+            width: 2.8rem;
+            display: block;
+            margin: .5rem auto .1rem auto;
+        }
+        p{
+            font-size: .28rem;
+            color: #999;
+            letter-spacing: 0;
+            line-height: .26rem;
+            padding: .2rem 0 .2rem 0;
+            text-align: center;
+        }
+        .wechat-btn{
+            background: #FF9148;
+            -webkit-tap-highlight-color: transparent;
+            font-size: .34rem;
+            border-radius: 0.06rem;
+            height: 0.8rem;
+            width: 5.2rem;
+            display: block;
+            margin: .1rem auto .3rem auto;
+            color: #FFFFFF;
+            display: block;
+        }
+    }
+}

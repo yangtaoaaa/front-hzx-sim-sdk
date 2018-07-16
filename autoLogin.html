@@ -1,0 +1,130 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!--
+  - 游戏猫SDK自动登录
+  - @author: Storm
+  - @date: 2016-11-15
+  -->
+<head>
+    <meta charset="utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="screen-orientation" content="portrait" />
+    <meta name="x5-orientation" content="portrait" />
+    <meta name="renderer" content="webkit" />
+    <meta name="author" content="Storm" />
+    <title>auto</title>
+    <script>window.VERSION = '2.0.0';</script>
+    <style>html {font-size: 50px}</style>
+    <link rel="shortcut icon" href="//static.youximao.tv/img/gamecat/gamecat.ico?v=2.0.0" />
+    <link rel="stylesheet" href="//static.youximao.tv/css/base-0.1.min.css?v=2.0.0" />
+    <style>
+        body, html {
+            background-color: transparent;
+        }
+        .autoLogin {
+            font: 20px/1.5 Arial, 'Microsoft YaHei';
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            width: 173px;
+            background-color: rgba(0,0,0,0.80);
+            box-shadow: 0 0 19px 3px rgba(129,128,128, 1);
+            border-radius: 8px;
+            color: #fff;
+            text-align: center;
+            padding: 15.5px 0 15px;
+        }
+        .autoLogin a {
+            color: #fc0;
+            font-size: 12px;
+            /*text-decoration: underline;*/
+            display: block;
+            margin-top: 12px;
+        }
+        .autoLogin h2 {
+            margin-bottom: 5.5px;
+            font-size: 18px;
+            color: #fff;
+        }
+        .icon {
+            width: 20px;
+            height: 20px;
+            display: block;
+            background: url(data:image/png;base64,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) no-repeat center;
+            background-size: 100%;
+            -webkit-animation: preloader-spin 1s steps(12, end) infinite;
+            animation: preloader-spin 1s steps(12, end) infinite;
+            margin: 0 auto;
+        }
+        @-webkit-keyframes preloader-spin {
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+        @keyframes preloader-spin {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="autoLogin">
+        <!--<h1>喵号1234567</h1>-->
+        <h2>登录中...</h2>
+        <div><span class="icon icon-loading"></span></div>
+        <!--<a class="switchAccount" href="javascript:;">切换帐号</a>-->
+    </section>
+    
+    <script type="text/javascript">
+        /* jsbrige 接入代码*/
+        !function(){function e(e){o=e.createElement("iframe"),o.style.display="none",o.src=p+"://"+u,e.documentElement.appendChild(o)}function a(e){if(WebViewJavascriptBridge._messageHandler)throw new Error("WebViewJavascriptBridge.init called twice");WebViewJavascriptBridge._messageHandler=e;var a=v;v=null;for(var n=0;n<a.length;n++)c(a[n])}function n(e,a){t({data:e},a)}function i(e,a){f[e]=a}function r(e,a,n){t({handlerName:e,data:a},n)}function t(e,a){if(a){var n="cb_"+w++ +"_"+(new Date).getTime();g[n]=a,e.callbackId=n}l.push(e),o.src=p+"://"+u}function s(){var e=JSON.stringify(l);return l=[],e}function c(e){setTimeout(function(){var a,n=JSON.parse(e);if(n.responseId){if(a=g[n.responseId],!a)return;a(n.responseData),delete g[n.responseId]}else{if(n.callbackId){var i=n.callbackId;a=function(e){t({responseId:i,responseData:e})}}var r=WebViewJavascriptBridge._messageHandler;n.handlerName&&(r=f[n.handlerName]);try{r(n.data,a)}catch(s){"undefined"!=typeof console&&console.log("WebViewJavascriptBridge: WARNING: javascript handler threw.",n,s)}}})}function d(e){v?v.push(e):c(e)}if(!window.WebViewJavascriptBridge){var o,l=[],v=[],f={},p="wvjbscheme",u="__WVJB_QUEUE_MESSAGE__",g={},w=1;window.WebViewJavascriptBridge={init:a,send:n,registerHandler:i,callHandler:r,_fetchQueue:s,_handleMessageFromObjC:d};var b=document;e(b);var h=b.createEvent("Events");h.initEvent("WebViewJavascriptBridgeReady"),h.bridge=WebViewJavascriptBridge,b.dispatchEvent(h)}}();
+        WebViewJavascriptBridge.init(function (response, responseCallback) {
+            responseCallback();
+        });
+    </script>
+    <script type="text/javascript">
+
+
+        (function (doc) {
+            'use strict';
+            var accessToken=null;
+            // var swithAccount = doc.querySelector('.switchAccount');
+
+            // swithAccount.onclick = function () {
+            //     WebViewJavascriptBridge.callHandler('js_switchAccount',{code:2});
+            // };
+ 
+            var url=location.href;
+            var paramStr=url.substr(url.indexOf("?")+1);
+            var array_=paramStr.split("&");
+          
+            var temp="";
+            for(var i=0;i<array_.length;i++){
+                temp = array_[i];
+                if(temp.indexOf("#access_token")!=-1){
+                    accessToken=temp.substr(temp.indexOf("=")+1);
+                    break;
+                }
+            }
+            if(!accessToken){
+                alert("access token error");
+            }else{
+                // window.WebViewJavascriptBridge.callHandler('web_accessToken', {accessToken:accessToken});
+                WebViewJavascriptBridge.callHandler('web_accessToken', {accessToken:accessToken});
+            }
+        }(document));
+    </script>
+
+</body>
+
+</html>

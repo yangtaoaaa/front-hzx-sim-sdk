@@ -1,0 +1,18 @@
+.sdk-tab {
+    font-size: .28rem;
+    width: 100%;
+    border-bottom: 1px solid #e5e5e5; /* no */
+    position: relative;
+    .sdk-tab-main {
+        display: flex;
+    }
+    .sdk-tab-bar {
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background: #F67B29;
+        height: .04rem;
+        transition: left .5s;
+    }
+}

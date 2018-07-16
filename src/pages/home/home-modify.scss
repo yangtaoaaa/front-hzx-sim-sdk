@@ -1,0 +1,53 @@
+.home {
+    .sdk-cell {
+        padding: .16rem .2rem;
+        font-size: .28rem;
+        li {
+            height: .76rem;
+            .cell-link {
+                width: 100%;
+                display: inline-block;
+                .cell-right::after {
+                    content: "";
+                    height: .76rem;
+                    width: .14rem;
+                    background: url('../../assets/icon_tabbar_cat.jpg') no-repeat center;
+                    background-size: contain;
+                    margin-left: 0.15rem;
+                }
+            }
+            .cell-left {
+                line-height: .76rem;
+                float: left;
+                color: #000;
+            }
+            .cell-right {
+                display: flex;
+                padding-left: .5rem;
+                text-align: right;
+                align-items: center;
+                height: .76rem;
+                color: #666666;
+                float: right;
+            }
+            button {
+                width: .98rem;
+                height: .48rem;
+                background: #ffcc00;
+                border-radius: .06rem;
+                font-size: .28rem;
+                color: #333333;
+                border: none;
+                padding: 0;
+            }
+            &::after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+        }
+        &+.sdk-cell {
+            border-top: 1px solid rgba($color: #999999, $alpha: .2); /*no*/
+        }
+    }
+}

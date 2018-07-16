@@ -1,0 +1,33 @@
+.system-messages {
+    position: relative;
+    font-size: .28rem;
+    height: 100%;
+    .message-list {
+        li {
+            height: 0.38rem;
+            border-bottom: 1px solid #E8E8E8; /*no*/
+            padding: .3rem .2rem;
+            span{
+                font-size: 0.28rem;
+                color: #333333;
+                letter-spacing: 0;
+                display: block;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }       
+    }
+    .system-container{
+        width: 100%;
+        text-align: center;  
+        padding-top: .3rem;            
+        img {
+            width: 3.56rem;
+        }     
+        p {
+            font-size: .32rem;
+            padding-top: .2rem;                        
+            color: #999;
+        }
+    }
+}

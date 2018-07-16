@@ -1,0 +1,81 @@
+.button-back-div{
+    background-color: #890999;
+    width: 100%;
+    height: 2.5rem;
+    font-size: .2rem;
+    .btn{
+        display: inline-block;
+        width: 1.28rem;
+        height: 1.28rem;
+        line-height: 1.28rem;
+        text-align: center;
+    }
+    a:hover{
+        background-color: red;
+        text-align: left;
+    }
+}
+.homeTest{
+    height: 2.5rem;
+    width: 100%;
+    .sdk-cell{
+        li{
+            height: 1.88rem;
+            // display: flex;
+            // display: -webkit-flex;
+            .cell-left{
+                font-size: .24rem;
+                color: white;
+                // align-self: center;
+                line-height: 1.88rem;
+            }
+            .cell-right{
+                // display: inline-block;
+                font-size: .24rem;
+                color: white;
+                line-height: 1.88rem;
+                float: right;
+                // align-self: center;
+                padding-right: .6rem;
+                // width: .6rem;
+                // background-color: aqua;
+                // height: 1.88rem;
+                // margin-right: .3rem;
+                
+            }
+            .cell-right::after {
+                height: 1.88rem;
+                width: .14rem;
+                background-size: contain;
+                background: url('../../assets/icon_tabbar_cat.jpg') no-repeat center;
+            }
+            .cell-right-label{
+                // display: inline-block;
+                font-size: .24rem;
+                color: white;
+                align-self: center;
+                line-height: 1.88rem;
+                // padding-left: 1.8rem;
+                float: right;
+                padding-right: .6rem;
+                // width: .6rem;
+                // background-color: aqua;
+                // height: 1.88rem;
+                // margin-right: .3rem;
+                // background-size: 30% 30%;
+                // background: url('../../assets/icon-right.png') no-repeat center;
+            }
+            .cell-right-label::after {
+                content: "";
+                // display: inline-block;
+                height: 1.88rem;
+                width: .34rem;
+                background: url('../../assets/icon_tabbar_cat.jpg') no-repeat center;
+                background-size: contain;
+                position: absolute;
+                // top: 0;
+                right: 0;
+            }
+        }
+    }
+}

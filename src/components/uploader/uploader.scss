@@ -1,0 +1,62 @@
+.upload-complain {
+    flex-direction: column;
+    align-items:inherit;
+    margin: .2rem;
+    display: inline-block;
+    p{
+        font-size: .28rem;
+    }
+    p:first-child {
+        padding-bottom: 0.2rem
+    }
+    .upload-button::before {
+        width: 0.04rem;
+        height: 0.79rem;
+    }
+    .upload-button::after {
+        width: 0.79rem;
+        height: 0.04rem;
+    }
+    .upload-button {
+        background: url(../../assets/icon_tabbar_cat.jpg);
+        background-size: 1.6rem;
+        width: 1.6rem;
+        height: 1.6rem;
+        float: left;
+        position: relative;
+        input {
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .review-pic {
+        position: inherit;
+        position: relative;
+        height: 1.6rem;
+        img {
+            width: 1.6rem;
+            height: 1.6rem;
+        }
+        .del-pic {
+            background: url('../../assets/icon_tabbar_cat.jpg');
+            background-size: 0.3rem;
+            position: relative;
+            left: 1.45rem;
+            top: -1.75rem;
+            height: 0.3rem;
+            width: 0.3rem;
+        }
+        .upload-num {
+            font-size: .28rem;
+            color: #F67B29;
+            position: absolute;
+            left: 110%;
+            bottom: 0;
+        }
+    }
+}
